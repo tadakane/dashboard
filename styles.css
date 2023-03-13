@@ -23,6 +23,7 @@ body, html {
     color: white;
     font-weight: bold;
     box-shadow: 5px 0px 10px -10px black;
+    z-index: 1;
 }
 
 .pagelabel {
@@ -56,18 +57,21 @@ body, html {
 
 .search {
     padding: 20px;
+    padding-top: 10px;
     grid-column: 2 / -1;
     grid-row: 1 / 2;
     display: grid;
     grid-template-rows: 1fr 1fr;
     box-shadow: 0px 5px 10px -10px rgb(0, 0, 0);
+    gap: 20px;
+    z-index: 1;
 }
 
 .uppersearch {
     display: grid;
     grid-template-columns: auto 2fr 1fr auto auto;
     gap: 20px;
-    align-items: start;
+    align-items: center;
 }
 
 .lowersearch {
@@ -112,7 +116,6 @@ button:hover {
     display: grid;
     grid-template-columns: 3fr 1fr;
     background-color: rgb(232, 232, 232);
-    z-index: -1;
     padding: 30px;
     gap: 20px;
 }
@@ -131,12 +134,13 @@ button:hover {
 
 .card {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 0fr auto 1fr auto;
     background-color: white;
     border-radius: 8px;
     padding: 20px;
     height: 235px;
     border-left: 9px solid #008080;
+    z-index: 1;
 }
 
 .card > div:last-child {
@@ -169,12 +173,13 @@ button:hover {
     padding: 25px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
 }
 
 .trenditem {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    align-items: center;
 }
 
 .logo {
@@ -211,4 +216,36 @@ strong {
 .avatar {
     width: 50px;
     height: auto;
+}
+
+.loweravatar {
+    width: 75px;
+    height: auto;
+}
+
+.credit {
+    color: rgb(141, 141, 141);
+    padding-left: 15px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer > :nth-child(1) {
+    background-color: pink;
+}
+
+.empty {
+    background-color: rgb(232, 232, 232);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
